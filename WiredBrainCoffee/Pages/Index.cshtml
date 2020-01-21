@@ -1,0 +1,143 @@
+﻿@page
+@model IndexModel
+
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('images/banner/hotel-windsor-fitness-spa-banner.jpg'); background-size: cover">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Group excercises</h3>
+                    <p>For begginers and advanced</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/banner/frauen-fitness-banner.jpg'); background-position-y:top">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>One on one</h3>
+                    <p>With best personal trainers</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/banner/men-woman-banner.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Always there for You</h3>
+                    <p>Personal trainers wanting to help</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('images/banner/men-woman-running-banner.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Best fitness equipment</h3>
+                    <p>Simply the best.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+<div class="container">
+    <h1 class="my-4">Three options to keep your fit and healthy.</h1>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-trainer">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Train</h2>
+                    <p class="card-text">A modern fitness environment designed for everyone… from first time gym goers to fitness fanatics. It's for You to choose whether to train alone or in group. But remember to choose wisely!</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-page="Offers" class="btn btn-success">Training offers</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-protein-shake">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Eat</h2>
+                    <p class="card-text">Discover delicious meals to aid your workout recovery and effectiveness, and get expert diet advice for better muscle gains and healthy fat loss.</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-page="Menu" class="btn btn-success" >Full Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-image bg-spa">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Relax</h2>
+                    <p class="card-text">A dry sauna, relaxation cave, and steam sauna will certainly help you relax after a hard workout or a day on the slopes.</p>
+                    <p class="card-text">Our friendly SPA will suit Your needs</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-success">Relax</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+    <div class="row">
+        @*<div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Download our App</h2>
+                    <div class="description">
+                        <p>Stay wired on the go with these benefits:</p>
+                        <ul>
+                            <li>Coupons and promotions</li>
+                            <li>Brainiacs club benefits</li>
+                            <li>Store locator</li>
+                            <li>Latest menu options</li>
+                        </ul>
+                    </div>
+                    <img class="img-fluid rounded" src="~/images/download-small.png" alt="">
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <cache expires-after="TimeSpan.FromSeconds(5)" vary-by-query="time">
+                    <div class="card-body">
+                        <h2 class="card-title">Popular Brews <small>as of @DateTime.Now</small></h2>
+                        <p><span class="card-text text-success">Pumpkin Latte</span> - A refreshing pumpkin flavored drink, with a hint of mocha and spice. <i>350 calories</i><i> $3.49</i></p>
+                        <p><span class="card-text text-success">Light Mocha</span> - All the mocha flavoring with just a few of the calories. <i>100 calories</i><i> $2.99</i></p>
+                        <p><span class="card-text text-success">Vanilla Cappucino</span> - The natural sweetness of vanilla ensures minimal sugar and calories. <i>150 calories</i><i> $3.99</i></p>
+                    </div>
+                </cache>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-success">Full Menu</a>
+                </div>
+            </div>
+        </div>*@
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Contact Us</h2>
+                    <img style="width: 75%; margin: 0 auto; display: block;" src="~/images/placeholder.png" />
+                    <p>Questions or feedback about anything? We'd love to hear from you.</p>
+                </div>
+                <div class="card-footer">
+                    <a asp-page="Contact" class="btn btn-success">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+</div>

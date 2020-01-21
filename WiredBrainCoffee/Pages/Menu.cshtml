@@ -1,0 +1,33 @@
+﻿@page
+@model MenuModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        Our Menu
+    </h1>
+    <hr />
+    <h3>Brain food, comfort food..we have it all.</h3>
+    <p>Our food is made with all natural ingredients and sourced from local farms.  We're committed to sustainability!</p>
+    <div class="row">
+        @foreach (var item in Model.MenuItems)
+        {
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="/item"><img asp-append-version="true" class="card-img-top" src="~/images/Menu/@item.ImageFile" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a class="color-main" href="#">@item.Name</a>
+                        </h4>
+                        <p class="card-text">@item.Summary</p>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-page="item" asp-route-slug="@item.Slug" class="btn btn-success w-100">Details & Nutrition</a>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+</div>

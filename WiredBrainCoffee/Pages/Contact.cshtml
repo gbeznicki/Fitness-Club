@@ -1,0 +1,73 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container">
+    <h1 class="mt-4 mb-3">
+        Contact
+        <small>We'd love to hear from you.</small>
+    </h1>
+    @if (!string.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-success">@Model.Message</div>
+    }
+    <div class="row">
+        <div class="col-md-8 mb-4">
+            <p>Life gets busy but we try to respond with 24 hours.  If you have a more immediate question, give us a ring using the number over on the right. We are crazy friendly!</p>
+            <br />
+            <form asp-page="Contact" method="post">
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Name">Name:</label>
+                        <input asp-for="Contact.Name" class="form-control"/>
+                        <span asp-validation-for="Contact.Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Phone">Phone Number:</label>
+                        <input asp-for="Contact.Phone" class="form-control" />
+                        <span asp-validation-for="Contact.Phone" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Email">Email:</label>
+                        <input asp-for="Contact.Email" class="form-control" />
+                        <span asp-validation-for="Contact.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label asp-for="Contact.Message">Message:</label>
+                        <textarea rows="10" cols="100" asp-for="Contact.Message" class="form-control"></textarea>
+                        <span asp-validation-for="Contact.Message" class="text-danger"></span>
+                    </div>
+                </div>
+                <div id="success"></div>
+                <button type="submit" class="btn btn-success" id="sendMessageButton">Send Message!</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <h3>Keep in Touch</h3>
+                <p>Sign up for our mailing list - no spam, we promise.</p>
+                <form asp-page-handler="Subscribe">
+                    <div class="control-group form-group">
+                        <input name="address" type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="control-group form-group">
+                        <input type="submit" class="btn btn-success" value="Join" />
+                    </div>
+                </form>
+            </div>
+            <h3>Where to find us:</h3>
+
+            <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6217.561841648514!2d-73.97107391676826!3d40.799839468555405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f624f81f9e47%3A0x9449f8329063c319!2sBeFitNYC!5e0!3m2!1spl!2spl!4v1579349696738!5m2!1spl!2spl" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
